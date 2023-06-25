@@ -1,0 +1,10 @@
+<div th:fragment="itemreadcontainer">
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3"> Voragine Fitness <small>Products</small></h1>
+        <div th:include="components/Breadcrumbs/itemread.html :: breadcrumb"></div>
+        <a class="btn btn-primary"> Create Product</a>
+        <h2>Products</h2>
+        <div th:include="components/Tables/itemread.html :: table"></div>
+    </div>
+</div>

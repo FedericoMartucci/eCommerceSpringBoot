@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Voragine Fitness</title>
+    <div th:include="components/Animations/bootstrap.html :: bootstraplink"></div>
+</head>
+<body>
+<!-- Navigation -->
+<div th:include="components/NavBar/navbar.html :: navbar"></div>
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+        Voragine Fitness <small>Products</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active">View Products</li>
+    </ol>
+    <a class="btn btn-primary" href="#" > Create Product</a>
+    <h2>Products</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td><a  class="btn btn-warning" href="">Edit</a> </td>
+            <td><a  class="btn btn-danger" href="">Delete</a> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    <!-- Footer -->
+    <div th:include="components/Footer/footer.html :: footer"></div>
+    <!-- Bootstrap core JavaScript -->
+    <div th:include="components/Animations/bootstrap.html :: bootstrapcontext"></div>
+</body>
+</html>
