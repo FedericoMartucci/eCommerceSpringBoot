@@ -1,7 +1,7 @@
 <div th:fragment="itemupdatecontainer">
     <h1 class="mt-4 mb-3"> Voragine Fitness <small>Products</small></h1>
-    <div th:include="components/Breadcrumbs/itemupdate.html :: breadcrumb"></div>
+    <div th:replace="~{components/Breadcrumbs/itemupdate.html :: breadcrumb}"></div>
     <h2>Update Product</h2>
-    <div th:include="components/Forms/itemupdate.html :: itemupdateform"></div>
+    <div th:replace="~{components/Forms/itemupdate.html :: itemupdateform}"></div>
 </div>
 

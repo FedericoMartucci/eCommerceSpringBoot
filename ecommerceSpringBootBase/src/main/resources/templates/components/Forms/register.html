@@ -1,19 +1,22 @@
-<div th:fragment="registerform">
-    <form method="post">
-        <div class="form-group">
-            <label>Full name:</label> <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Enter your full name" autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label> <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email" autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="direccion">Address:</label> <input type="text" class="form-control" id="direccion" name="direccion" required placeholder="Enter your address" autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label>Password:</label> <input type="password" class="form-control" id="password" name="password" required placeholder="Enter yout password" autocomplete="off">
-        </div>
-        <div class="col-sm-2">
-            <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-    </form>
-</div>
+<form th:fragment="registerform" method="post">
+    <div class="form-group">
+        <label>Full name:</label> <input type="text" class="form-control" id="nombre" name="nombre" required
+                                       placeholder="Enter your full name" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label> <input type="email" class="form-control" id="email" name="email" required
+                                                 placeholder="example@hotmail.com" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="direccion">Address:</label> <input type="text" class="form-control" id="direccion"
+                                                         name="direccion" required placeholder="Enter your address"
+                                                         autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label>Password:</label> <input type="password" class="form-control" id="password" name="password" required
+                                         placeholder="Enter your password" autocomplete="off">
+    </div>
+    <div class="col-sm-2">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>

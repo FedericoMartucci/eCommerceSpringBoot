@@ -1,7 +1,5 @@
-<div th:fragment="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
-        <li class="breadcrumb-item"><a th:href="@{/usuario/compras}">Purchases</a></li>
-        <li class="breadcrumb-item active">Purchase details</li>
-    </ol>
-</div>
+<ol th:fragment="breadcrumb" class="breadcrumb">
+    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+    <li class="breadcrumb-item"><a th:href="@{/usuario/compras}">Purchases</a></li>
+    <li class="breadcrumb-item active">Purchase details</li>
+</ol>

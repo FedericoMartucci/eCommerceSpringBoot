@@ -87,6 +87,21 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public List<Producto> getProductos() {
+		return productos;
+	}
+
+	public List<Orden> getOrdenes() {
+		return ordenes;
+	}
+
+	public void setProductos(List<Producto> productos) {
+		this.productos = productos;
+	}
+
+	public void setOrdenes(List<Orden> ordenes) {
+		this.ordenes = ordenes;
+	}
 	
 	//Methods
 	@Override
@@ -95,5 +110,7 @@ public class Usuario {
 				+ ", direccion=" + direccion + ", telefono=" + telefono + ", tipo=" + tipo + ", password=" + password
 				+ "]";
 	}
+
+
 	
 }

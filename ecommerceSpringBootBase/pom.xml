@@ -8,11 +8,11 @@
         <version>3.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.nec2solutions</groupId>
-    <artifactId>ecommerceSpringBootEtapas</artifactId>
+    <groupId>com.ecommerce</groupId>
+    <artifactId>ecommerceSpringBootBase</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ecommerceSpringBootEtapas</name>
-    <description>ecommerceSpringBootEtapas</description>
+    <name>ecommerceSpringBootBase</name>
+    <description>ecommerceSpringBootBase</description>
     <properties>
         <java.version>17</java.version>
     </properties>

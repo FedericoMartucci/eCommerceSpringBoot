@@ -1,45 +1,47 @@
-<div th:fragment="itemupdateform">
-    <form class="form-horizontal" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="">
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="nombre">Name:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="nombre" name="nombre"
-                       placeholder="Ingrese el nombre del producto" required autocomplete="off" value="">
-                <div id="prueba"></div>
-            </div>
+<form th:fragment="itemupdateform" class="form-horizontal" th:action="@{/productos/update}" method="post"
+      enctype="multipart/form-data">
+    <input type="hidden" name="id" th:value="${producto.id}">
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="nombre">Product name:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="nombre" name="nombre"
+                   placeholder="Product name" required autocomplete="off"
+                   th:value="${producto.nombre}">
+            <div id="prueba"></div>
         </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="descripcion">Description:</label>
-            <div class="col-sm-10">
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="descripcion">Description:</label>
+        <div class="col-sm-10">
                 <textarea class="form-control" id="descripcion" name="descripcion"
-                          placeholder="Enter a description" required autocomplete="off"> </textarea>
-            </div>
+                          placeholder="Enter the product description" required autocomplete="off"
+                          th:text="${producto.descripcion}"> </textarea>
         </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="cantidad">Amount:</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" id="cantidad" name="cantidad"
-                       placeholder="Enter the quantity" value="" required autocomplete="off">
-            </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="cantidad">Amount:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="cantidad" name="cantidad"
+                   placeholder="Amount" th:value="${producto.cantidad}" required
+                   autocomplete="off">
         </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="precio">Price:</label>
-            <div class="col-sm-10">
-                <input type="number" class="form-control" step="any" id="precio" name="precio"
-                       placeholder="Enter the product price" value="" required autocomplete="off">
-            </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="precio">Price:</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" step="any" id="precio" name="precio" placeholder="Price" th:value="${producto.precio}" required autocomplete="off">
         </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="img">Image:</label>
-            <div class="col-sm-10">
-                <input type="file" class="form-control-file" id="img" name="img">
-            </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="img">Image:</label>
+        <div class="col-sm-10">
+            <input type="file" class="form-control-file" id="img" name="img">
         </div>
-        <div class="row">
-            <div class="col-sm-2">
-                <button type="submit" class="btn btn-success">Save</button>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <button type="submit" class="btn btn-success">Submit</button>
         </div>
-    </form>
-</div>
+    </div>
+</form>
+

@@ -3,7 +3,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-9">
-                    <div th:include="components/Tables/cart.html :: table"></div>
+                    <div th:replace="~{components/Tables/cart.html :: table}"></div>
                 </div>
                 <div class="col-lg-3">
                     <h2 class="card-title">SUBTOTAL</h2>
