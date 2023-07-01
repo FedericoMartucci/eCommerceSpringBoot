@@ -15,6 +15,7 @@ public class Producto {
 	private String imagen;
 	private double precio;
 	private int cantidad;
+	private int stock;
 	
 	@ManyToOne
 	private Usuario usuario;
@@ -96,12 +97,23 @@ public class Producto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+	public int getStock() {
+		return stock;
+	}
+	
+	
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	
 	//Methods
 	@Override
 	public String toString() {
 		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", imagen=" + imagen
 				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
 	}
+
+
 	
 	
 }

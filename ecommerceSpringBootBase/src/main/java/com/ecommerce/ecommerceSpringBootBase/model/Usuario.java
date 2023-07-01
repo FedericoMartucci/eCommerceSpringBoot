@@ -26,6 +26,9 @@ public class Usuario {
 	private List<Orden> ordenes;
 	
 	//Constructors
+	public Usuario() {
+		
+	}
 	public Usuario(Integer id, String nombre, String username, String email, String direccion, String telefono,
 			String tipo, String password) {
 		this.id = id;

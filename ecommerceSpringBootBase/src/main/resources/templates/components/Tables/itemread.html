@@ -5,18 +5,18 @@
         <th scope="col">Description</th>
         <th scope="col">Stock</th>
         <th scope="col">Price</th>
-        <th scope="col">Action</th>
-        <th scope="col">Action</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><a  class="btn btn-warning" href="productos/editar">Edit</a> </td>
-        <td><a  class="btn btn-danger" href="#">Delete</a> </td>
+    <tr th:each="producto : ${products}">
+        <td th:text="${producto.nombre}"></td>
+        <td th:text="${producto.descripcion}"></td>
+        <td th:text="${producto.cantidad}"></td>
+        <td th:text="${producto.precio}"></td>
+        <td><a  class="btn btn-warning" th:href="@{products/update/{id} (id=${producto.id}) }">Edit</a> </td>
+        <td><a  class="btn btn-danger" th:href="@{products/delete/{id} (id=${producto.id}) }">Delete</a> </td>
     </tr>
     </tbody>
 </table>

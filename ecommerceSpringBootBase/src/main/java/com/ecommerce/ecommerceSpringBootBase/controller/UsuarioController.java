@@ -1,7 +1,10 @@
 package com.ecommerce.ecommerceSpringBootBase.controller;
+
 import com.ecommerce.ecommerceSpringBootBase.model.Producto;
+import com.ecommerce.ecommerceSpringBootBase.repository.UsuarioRepository;
 import com.ecommerce.ecommerceSpringBootBase.service.ProductoService;
 
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,19 +14,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/usuario")
+@RequestMapping("/user")
 public class UsuarioController {
-	@Autowired
-	private ProductoService productoService;
-	
-	@GetMapping("")
+    @Autowired
+    private ProductoService productoService;
+
+    private UsuarioRepository usuarioRepository;
+
+    @GetMapping("")
     public String home(Model model) {
-        List<Producto> productos = productoService.findAll();
-        model.addAttribute("productos", productos);
-        return "usuario/home";
+        List<Producto> products = productoService.findAll();
+        products.sort(Comparator.comparing(Producto::getNombre));
+        model.addAttribute("products", products);
+        return "user/home";
     }
 
-    @GetMapping("/registro")
+    @GetMapping("/signin")
     public String register() {
         return "pages/register";
     }
@@ -33,19 +39,24 @@ public class UsuarioController {
         return "pages/login";
     }
 
-    @GetMapping("/compras")
+    @GetMapping("/purchases")
     public String shopping() {
         return "pages/shopping";
     }
 
-    @GetMapping("/detallecompra")
+    @GetMapping("/purchasedetail")
     public String shoppingdetail() {
         return "pages/shoppingdetail";
     }
 
-    @GetMapping("/cerrar")
+    @GetMapping("/logout")
     public String closesession() {
         return "redirect:/";
     }
-}
 
+    @GetMapping("/mostrar")
+    public String mostrarUsuarios(Model model) {
+        model.addAttribute("usuarios", usuarioRepository.findAll());
+        return "pages/users";
+    }
+}

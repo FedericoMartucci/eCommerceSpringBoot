@@ -1,13 +1,12 @@
-<form th:fragment="itemdetailform" method="POST">
-    <input type="hidden" name="id">
-    <h2 class="card-title"></h2>
+<form th:fragment="itemdetailform" th:action="@{/cart}" method="POST">
+    <input type="hidden" th:value="${producto.id}"  name="id">
+    <h2 class="card-title" th:text="${producto.nombre}"></h2>
     <ul class="list-group">
-        <li class="list-group-item"><h5>Price</h5></li>
-        <li class="list-group-item"><p>Description</p></li>
+        <li class="list-group-item"><h5 th:text=" 'Price: $'+ ${producto.precio}"></h5></li>
+        <li class="list-group-item"><p th:text=" 'Description: '+ ${producto.descripcion}"></p></li>
         <li class="list-group-item">
-            <h6>Amount: <input type="number" id="cantidad" name="cantidad" autocomplete="off" min="1" max="5"
-                                 value="1"></h6>
+            <h6>Amount: <label for="cantidad"></label><input type="number" id="cantidad" name="cantidad" autocomplete="off" min="1" max="5" value="1"></h6>
         </li>
     </ul>
-    <button type="submit" class="btn btn-dark">Add to cart</button>
+    <button type="submit" class="btn btn-success">Add to cart</button>
 </form>

@@ -6,11 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Voragine Fitness</title>
-    <div th:include="components/Animations/bootstrapback.html :: bootstraplink"></div>
+    <div th:replace="~{components/Animations/bootstrap.html :: bootstraplink}"></div>
 </head>
 <body>
 <!-- Navigation -->
-<div th:include="components/NavBar/navbaruser.html :: navbaruser"></div>
+<div th:replace="~{components/NavBar/navbaruser.html :: navbaruser}"></div>
 <!-- Page Content -->
 <div class="container">
     <div class="card mb-3">
@@ -23,12 +23,12 @@
             </div>
         </div>
     </div>
-    <div th:include="components/Forms/login.html :: loginform"></div>
-    <a th:href="@{/usuario/registro}" class="card-link">If you don't have an account yet, you can register here.</a>
+    <div th:replace="~{components/Forms/login.html :: loginform}"></div>
+    <a th:href="@{/user/signin}" class="card-link">If you don't have an account yet, you can sign in here.</a>
 </div>
 <!-- Footer -->
-<div th:include="components/Footer/footer.html :: footer"></div>
+<div th:replace="~{components/Footer/footer.html :: footer}"></div>
 <!-- Bootstrap core JavaScript -->
-<div th:include="components/Animations/bootstrapback.html :: bootstrapcontext"></div>
+<div th:replace="~{components/Animations/bootstrap.html :: bootstrapcontext}"></div>
 </body>
 </html>

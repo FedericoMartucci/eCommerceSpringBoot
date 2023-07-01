@@ -7,10 +7,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.nombre}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.direccion}"></td>
     </tr>
     </tbody>
 </table>

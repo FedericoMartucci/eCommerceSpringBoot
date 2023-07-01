@@ -6,16 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Voragine Fitness</title>
-    <div th:include="components/Animations/bootstrapback.html :: bootstraplink"></div>
+    <div th:replace="~{components/Animations/bootstrapid.html :: bootstraplink}"></div>
 </head>
 <body>
 <!-- Navigation -->
-<div th:include="components/NavBar/navbar.html :: navbar"></div>
+<div th:replace="~{components/NavBar/navbaradmin.html :: navbaradmin}"></div>
 <!-- Page Content -->
-<div th:include="components/Item/itemcreate.html :: itemcreatecontainer"></div>
+<div th:replace="~{components/Item/itemcreate.html :: itemcreatecontainer}"></div>
 <!-- Footer -->
-<div th:include="components/Footer/footer.html :: footer"></div>
+<div th:replace="~{components/Footer/footer.html :: footer}"></div>
 <!-- Bootstrap core JavaScript -->
-<div th:include="components/Animations/bootstrapback.html :: bootstrapcontext"></div>
+<div th:replace="~{components/Animations/bootstrapid.html :: bootstrapcontext}"></div>
 </body>
 </html>

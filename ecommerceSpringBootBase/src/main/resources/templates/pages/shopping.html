@@ -6,30 +6,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Voragine Fitness</title>
-    <div th:include="components/Animations/bootstrapback.html :: bootstraplink"></div>
+    <div th:replace="~{components/Animations/bootstrap.html :: bootstraplink}"></div>
 </head>
 <body>
 <!-- Navigation -->
-<div th:include="components/NavBar/navbaruser.html :: navbaruser"></div>
+<div th:replace="~{components/NavBar/navbaruser.html :: navbaruser}"></div>
 <!-- Page Content -->
 <div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Voragine Fitness<small>Purchases</small></h1>
-    <div th:include="components/Breadcrumbs/shopping.html :: breadcrumb"></div>
+    <h1 class="mt-4 mb-3"> Voragine Fitness <small>Purchases</small></h1>
+    <div th:replace="~{components/Breadcrumbs/shopping.html :: breadcrumb}"></div>
     <!-- Blog Post -->
     <div class="card mb-4">
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12">
-                    <div th:include="components/Tables/shopping.html :: table"></div>
+                    <div th:replace="~{components/Tables/shopping.html :: table}"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Footer -->
-<div th:include="components/Footer/footer.html :: footer"></div>
+<div th:replace="~{components/Footer/footer.html :: footer}"></div>
 <!-- Bootstrap core JavaScript -->
-<div th:include="components/Animations/bootstrapback.html :: bootstrapcontext"></div>
+<div th:replace="~{components/Animations/bootstrap.html :: bootstrapcontext}"></div>
 </body>
 </html>

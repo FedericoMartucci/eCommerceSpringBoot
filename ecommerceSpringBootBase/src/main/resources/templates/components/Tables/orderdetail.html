@@ -1,18 +1,18 @@
 <table th:fragment="table" class="table">
-        <thead>
-        <tr>
-            <th scope="col">Amount</th>
-            <th scope="col">Product</th>
-            <th scope="col">Price</th>
-            <th scope="col">Total</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tbody>
+    <thead>
+    <tr>
+        <th scope="col">Amount</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="dtorden:${cart}">
+        <td th:text="${dtorden.nombre}"></td>
+        <td th:text="${dtorden.precio}"></td>
+        <td th:text="${dtorden.cantidad}"></td>
+        <td th:text="${dtorden.total}"></td>
+    </tr>
+    </tbody>
 </table>

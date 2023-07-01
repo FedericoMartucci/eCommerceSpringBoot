@@ -40,4 +40,10 @@ public class ProductoImplement implements ProductoService {
     public List<Producto> findAll() {
         return productoRepository.findAll();
     }
+
+	@Override
+	public void save(Producto producto) {
+		productoRepository.save(producto);
+		
+	}
 }
